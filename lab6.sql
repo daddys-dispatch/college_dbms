@@ -1,32 +1,37 @@
--- Create table A
+DROP TABLE Employee_A;
+DROP TABLE Employee_B;
+
+-- Create table A with required attributes
 CREATE TABLE Employee_A (
     Id NUMBER,
     Name VARCHAR2(50),
     Salary DECIMAL(10, 2)
 );
+SELECT * FROM Employee_A;
 
--- Insert record into table A
+-- Insert 3 records to table A
 INSERT INTO Employee_A VALUES
 (1, 'Adam', 45000.00),
 (2, 'Ben', 50000.00),
 (3, 'Charlie', 40000.00);
 SELECT * FROM Employee_A;
 
--- Create table B
+-- Create table B with required attributes
 CREATE TABLE Employee_B (
     Id NUMBER,
     Name VARCHAR2(50),
     Salary DECIMAL(10, 2)
 );
+SELECT * FROM Employee_B;
 
--- Insert record into table B
+-- Insert 3 records to table B
 INSERT INTO Employee_B VALUES
 (4, 'David', 47500.00),
-(5, 'Emily', 425000.00),
+(5, 'Emily', 42500.00),
 (6, 'Francis', 45000.00);
 SELECT * FROM Employee_B;
 
--- Declare a cursor to merge table B to A
+-- Declare CURSOR to merge table B to table A 
 DECLARE
     Id Employee_B.Id%TYPE;
     Name Employee_B.Name%TYPE;
