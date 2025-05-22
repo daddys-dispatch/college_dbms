@@ -1,17 +1,20 @@
--- Create a table Employee containing attributes: Id, Name, Age, Salary
+DROP TABLE Employee;
+
+-- Create a table with required attributes
 CREATE TABLE Employee (
     Id INTEGER PRIMARY KEY,
     Name VARCHAR(100),
     Age INTEGER,
     Salary DECIMAL(10, 2)
 );
+SELECT * FROM Employee;
 
+-- Insert 4 records
 INSERT INTO Employee VALUES
 (1, 'Adam', 30, 50000),
-(2, 'Ben', 35, 60000),
-(3, 'Charlie', 35, 55000),
-(4, 'David', 28, 62000),
-(5, 'Emily', 40, 70000);
+(2, 'Ben', 35, 62000),
+(3, 'Charlie', 35, 68000),
+(4, 'David', 38, 55000);
 SELECT * FROM Employee;
 
 -- Count the Number of Employees using Id
