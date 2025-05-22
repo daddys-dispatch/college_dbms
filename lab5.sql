@@ -1,17 +1,21 @@
--- Create a table Employee with attributes: Id, Name, Salary
+DROP TABLE Employee
+
+-- Create a table with required attributes
 CREATE TABLE Employee (
     Id NUMBER PRIMARY KEY,
     Name VARCHAR2(100),
     Salary NUMBER
 );
+SELECT * FROM Employee;
 
--- Insert records
+-- Insert 3 records
 INSERT INTO EMPLOYEE VALUES 
 (1, 'Adam', 50000),
 (2, 'Ben', 55000),
 (3, 'Charlie', 48000);
+SELECT * FROM Employee;
 
--- Declare a cursor to extract and display values from the table
+-- Declare CURSOR to extract and display values
 DECLARE
     Id Employee.Id%TYPE;
     Name Employee.Name%TYPE;
